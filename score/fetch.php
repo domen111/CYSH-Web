@@ -27,10 +27,10 @@
 
         return $content;
     }
-    $url = 'http://163.27.3.19/school/Login.asp';
+    $url = 'http://svrsql.tnfsh.tn.edu.tw/webschool/Login.asp';
     $postdata = "txtID=$id&txtPWD=$pwd&Chk=Y";
     $resource = setUrlCookie($url, $postdata); 
-    $url = 'http://163.27.3.19/school/STD_SCORE.asp';
+    $url = 'http://svrsql.tnfsh.tn.edu.tw/webschool/STD_SCORE.asp';
     $html= getUrlContent($resource, $url); 
     //echo iconv("UTF-8","BIG5", $html);
     if(iconv("BIG5","UTF-8", $html)=="無權使用 請登入"){
